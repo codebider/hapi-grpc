@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+
+  glint-database:
+
+    # @see: https://github.com/docker-library/postgres/blob/c4b019526a25d1300de77b9699d53ad187cf0dcf/12/alpine/Dockerfile
+    image: postgres:10.1-alpine
+    environment:
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: glints
+    expose:
+      - 5432
+    ports:
+      - 5432:5432

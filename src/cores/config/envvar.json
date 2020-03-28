@@ -1,0 +1,20 @@
+{
+  "host": {
+    "default": "0.0.0.0",
+    "env": "NODE_HOST"
+  },
+  "db": {
+    "password": {
+      "default": "password123",
+      "env": "DB_PASSWORD"
+    }
+  },
+  "port": {
+    "default": 5000,
+    "env": "NODE_PORT"
+  },
+  "secretKey": {
+    "default": "glints@123",
+    "env": "SECRET_KEY"
+  }
+}

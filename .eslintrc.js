@@ -1,0 +1,67 @@
+const prettierConfig = require('./.prettierrc');
+
+module.exports = {
+    plugins: [
+        'eslint-comments',
+        'hapi',
+        'jest',
+        'jsdoc',
+        'node',
+        'optimize-regex',
+        'prettier',
+        'promise',
+        'security',
+        'unicorn',
+    ],
+    extends: [
+        'airbnb-base',
+        'prettier/unicorn',
+        'plugin:eslint-comments/recommended',
+        'plugin:import/recommended',
+        'plugin:jest/recommended',
+        'plugin:jsdoc/recommended',
+        'plugin:node/recommended',
+        'plugin:prettier/recommended',
+        'plugin:promise/recommended',
+        'plugin:security/recommended',
+        'plugin:unicorn/recommended',
+    ],
+    env: {
+        es6: true,
+        jest: true,
+        node: true,
+    },
+    rules: {
+        'comma-dangle': ['error', 'always-multiline'],
+        'jsdoc/require-param-description': 'off',
+        'jsdoc/require-param-type': 'error',
+        'jsdoc/require-returns': 'error',
+        'jsdoc/require-returns-check': 'error',
+        'jsdoc/require-returns-description': 'off',
+        'jsdoc/require-returns-type': 'error',
+        'optimize-regex/optimize-regex': 'error',
+        'prettier/prettier': ['error', prettierConfig],
+        'security/detect-non-literal-require': 'off',
+        'security/detect-object-injection': 'off',
+        'unicorn/filename-case': 'off',
+        'unicorn/no-process-exit': 'off',
+        'unicorn/prevent-abbreviations': 'off',
+    },
+    overrides: [
+        {
+            files: [
+                '*.spec.js',
+                '*.test.js',
+                'jest.config.js',
+                'npm-ensure.js',
+                'src/setupTests.js',
+            ],
+            rules: {
+                'import/no-extraneous-dependencies': 'off',
+                'no-console': 'off',
+                'node/no-extraneous-require': 'off',
+                'node/no-unpublished-require': 'off',
+            },
+        },
+    ],
+};
