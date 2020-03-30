@@ -1,19 +1,7 @@
-# Installation
-- Install Nodejs version >= 10.13
-- Install npm
-- Install Docker
+# gRPC Server and Client Example for CRUD Note Service
 
-# Development
-### Setup data 
-
-- Run start docker-compose to run db for development
-`docker-compose up -d`
-
-- Migrate database `npm run sequelize-cli db:migrate`
-
-### Install modules
-- `npm install`
-
-### Start server 
-- `npm run develop`
-
+## Installation
+1. Clone or Download the project
+2. Run npm install
+3. Start server by running npm start
+4. Call gRPC by running either node get_notes, get_note, insert_note, delete_note
