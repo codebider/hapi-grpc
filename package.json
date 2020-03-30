@@ -4,6 +4,7 @@
   "description": "gRPC Server that provided CRUD Note Service",
   "main": "index.js",
   "scripts": {
+    "server": "node index.js",
     "start": "nodemon services/index.js --exec babel-node --ignore *.test.js",
     "dist:babel": "babel services -d dist --ignore **/*/__mocks__,**/*.test.js",
     "dist:prepare": "cp -r services/clients dist && rm -rf node_modules && npm install --production",

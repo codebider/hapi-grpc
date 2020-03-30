@@ -3,5 +3,5 @@
 ## Installation
 1. Clone or Download the project
 2. Run npm install
-3. Start server by running npm start
-4. Call gRPC by running either node get_notes, get_note, insert_note, delete_note
+3. Start server by running `node run server`
+4. Run client side: `npm start`
